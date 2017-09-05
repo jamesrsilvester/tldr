@@ -1,15 +1,27 @@
 {
   "manifest_version": 2,
 
-  "name": "GTmetrix Analyzer Plugin",
-  "description": "This extension will analyze a page using GTmetrix",
+  "name": "TLDR Tester",
+  "description": "Initial TLDR Test",
   "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "js": ["jquery.min.js", "content.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
 
   "browser_action": {
-   "default_icon": "cursor_sm_copy.png",
-   "default_popup": "popup.html"
+     "default_icon": "icon.png"
   },
+
   "permissions": [
-   "activeTab"
+     "activeTab"
    ]
+
 }
